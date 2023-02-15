@@ -6,9 +6,6 @@ class UserUseCase {
   constructor(private repository: UserRepository) {}
 
   public register = async (entity: Omit<User, "id">): Promise<User> => {
-    if(!entity.email || !entity.name || !entity.password)
-      throw new Error("Os campos não podem ser vazios");
-    
     if(entity.email.length > 40)
       throw new Error("String email muito grande");
 

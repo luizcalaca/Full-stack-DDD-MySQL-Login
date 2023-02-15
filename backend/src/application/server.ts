@@ -2,7 +2,7 @@ import 'dotenv/config';
 import app from './app';
 import connectToDatabase from '../infrastructure/utils/Connection';
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8800;
 connectToDatabase
   .getConnection()
   .then(() => {

@@ -12,6 +12,7 @@ class UserController {
       email: req.body.email,
       password: req.body.password
     }
+
     try {
       const result = await this.userUseCase.register(user)
       return res.status(201).json(result);

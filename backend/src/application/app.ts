@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
-app.use('/users', userRoutes);
+app.use('/api/auth', userRoutes);
 app.use(ErrorHandler.execute)
 
 export default app;
